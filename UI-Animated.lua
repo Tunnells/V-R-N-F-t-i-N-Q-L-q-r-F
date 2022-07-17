@@ -14,7 +14,7 @@ local UIAnimated = {}
 function UIAnimated.AddUI(Class, Part)
 	local NewUi = UIBuilder()
 	
-	print("CREATE")
+	warn("CREATE")
 	NewUi.Parent = ElementsCore
 	NewUi.Name = Class
 	NewUi.TextLabel.Text = Class
@@ -51,6 +51,7 @@ function UIAnimated.AddUI(Class, Part)
 end
 
 function UIAnimated.RemoveUI(Class)
+	warn("DESTROYING")
 	for _, Array in pairs(UIAssets) do
 		local Find = table.find(UIAssets, Array)
 
