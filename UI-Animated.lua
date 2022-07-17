@@ -14,6 +14,7 @@ local UIAnimated = {}
 function UIAnimated.AddUI(Class, Part)
 	local NewUi = UIBuilder()
 	
+	print("CREATE")
 	NewUi.Parent = ElementsCore
 	NewUi.Name = Class
 	NewUi.TextLabel.Text = Class
