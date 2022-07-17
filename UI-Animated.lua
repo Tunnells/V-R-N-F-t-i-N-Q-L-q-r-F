@@ -12,12 +12,9 @@ local Camera = workspace.CurrentCamera
 local UIAssets = {}
 local UIAnimated = {}
 
-print("TUNNELLS")
-
 function UIAnimated.AddUI(Class, Part)
 	local NewUi = UIBuilder()
 	
-	warn("CREATE")
 	NewUi.Parent = ElementsCore
 	NewUi.Name = Class
 	NewUi.TextLabel.Text = Class
@@ -30,7 +27,7 @@ function UIAnimated.AddUI(Class, Part)
 end
 
 function UIAnimated.RemoveUI(Class)
-	warn("DESTROYING")
+
 	for _, Array in pairs(UIAssets) do
 		local Find = table.find(UIAssets, Array)
 
