@@ -11,6 +11,8 @@ local Camera = workspace.CurrentCamera
 local UIAssets = {}
 local UIAnimated = {}
 
+print("TUNNELLS")
+
 function UIAnimated.AddUI(Class, Part)
 	local NewUi = UIBuilder()
 	
@@ -44,7 +46,7 @@ function UIAnimated.AddUI(Class, Part)
 							end						
 						end		
 					end
-					print()
+					print("UPDATE")
 					Array.UI.Position = UDim2.fromOffset(newPosition.X, newPosition.Y)
 				end
 			end
