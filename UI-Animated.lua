@@ -45,7 +45,8 @@ end
 
 function UIAnimated.Update()
 	if (#UIAssets) > 0 then
-
+		
+		print("AA")
 		for _, Array in pairs(UIAssets) do
 
 			local oldPosition = Array.Target.Position
@@ -62,14 +63,10 @@ function UIAnimated.Update()
 					end						
 				end		
 			end
-			print(newPosition.X)
 			Array.UI.Position = UDim2.fromOffset(newPosition.X, newPosition.Y)
 		end
 	end
 end
-
-function UIAnimated.UpdateUI()
-end
-
 RunService.RenderStepped:Connect(UIAnimated.Update)
+
 return UIAnimated
