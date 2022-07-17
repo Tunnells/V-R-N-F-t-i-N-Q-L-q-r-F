@@ -5,7 +5,7 @@ local ElementsCore = Player.PlayerGui:WaitForChild("UI-ElementsCore")
 local ElementsMainFrame = ElementsCore:WaitForChild("Frame")
 local ElementsScrolling = ElementsMainFrame:WaitForChild("ScrollingFrame")
 
-local UIBuilder = loadstring(game:HttpGet("https://raw.githubusercontent.com/Tunnells/V-R-N-F-t-i-N-Q-L-q-r-F/main/UI-Builder.lua"))()()
+local UIBuilder = loadstring(game:HttpGet("https://raw.githubusercontent.com/Tunnells/V-R-N-F-t-i-N-Q-L-q-r-F/main/UI-Builder.lua"))()
 local Camera = workspace.CurrentCamera
 
 local UIAssets = {}
