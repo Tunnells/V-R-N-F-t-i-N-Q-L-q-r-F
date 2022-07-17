@@ -25,25 +25,28 @@ function UIAnimated.AddUI(Class, Part)
 		table.insert(UIAssets, {UI = NewUi, Class = Class, Target = Part.Value, Name = Part.Name})
 	end
 	local UpdateLoop = coroutine.wrap(function()
-		if (#UIAssets) > 0 then
+		while task.wait() do
+			if (#UIAssets) > 0 then
 
-			for _, Array in pairs(UIAssets) do
+				for _, Array in pairs(UIAssets) do
 
-				local oldPosition = Array.Target.Position
-				local oldDistance = Player:DistanceFromCharacter(oldPosition)
-				local newPosition = Camera:WorldToScreenPoint(oldPosition)
+					local oldPosition = Array.Target.Position
+					local oldDistance = Player:DistanceFromCharacter(oldPosition)
+					local newPosition = Camera:WorldToScreenPoint(oldPosition)
 
-				local Name = Array.Name
+					local Name = Array.Name
 
-				if (Name) then
+					if (Name) then
 
-					if (Array.UI) then
-						if (Array.UI:FindFirstChild("TextLabel")) then
-							Array.UI.TextLabel.Text = tostring(Name).. " Distance: ".. math.floor(oldDistance)							
-						end						
-					end		
+						if (Array.UI) then
+							if (Array.UI:FindFirstChild("TextLabel")) then
+								Array.UI.TextLabel.Text = tostring(Name).. " Distance: ".. math.floor(oldDistance)							
+							end						
+						end		
+					end
+					print()
+					Array.UI.Position = UDim2.fromOffset(newPosition.X, newPosition.Y)
 				end
-				Array.UI.Position = UDim2.fromOffset(newPosition.X, newPosition.Y)
 			end
 		end
 	end)
