@@ -64,7 +64,6 @@ function UIAnimated.Update()
 					end						
 				end		
 			end
-			print("UPDATE")
 			Array.UI.Position = UDim2.fromOffset(newPosition.X, newPosition.Y)
 		end
 	end
